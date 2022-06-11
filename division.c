@@ -13,11 +13,14 @@ int main( void ) {
      q--;  
   }
    
-  __CPROVER_assert(q == (D - r) / d , "q == cociente");
-  __CPROVER_assert(r == D - ((q * d) ), "r == resto");
+  
+  //__CPROVER_assert(q == (D - r) / d , "q == cociente");
+  //__CPROVER_assert(r == D - ((q * d) ), "r == resto");
 
-  // Este assert es equivalente a realizar los 2 anteriores
-  __CPROVER_assert(D ==((q * d) + r), "Relación D, d, q, r"); 
-  printf( " quotient: %d,  reminder: %d\n", q, r );
+  //Este assert es equivalente a realizar los 2 anteriores
+  //__CPROVER_assert(D ==((q * d) + r), "Relación D, d, q, r"); 
+  //printf( " quotient: %d,  reminder: %d\n", q, r );
+  __CPROVER_assert(q == D/d, "Relación D, d, q, r"); 
+  __CPROVER_assert(r == D %d, "Relación D, d, q, r"); 
 }
 

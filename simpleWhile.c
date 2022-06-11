@@ -6,7 +6,6 @@ int main()
   int maxeven;
   int x = 0, i = 0;
 
-  
    for(int i=0; i <N; i++)__CPROVER_assume((numbers[i] >= -10) && (numbers[i] <= 10));
 
    maxeven = 1;
